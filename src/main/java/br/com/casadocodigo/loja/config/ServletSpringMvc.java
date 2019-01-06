@@ -2,6 +2,8 @@ package br.com.casadocodigo.loja.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import br.com.casadocodigo.loja.models.JPAConfiguration;
+
 public class ServletSpringMvc extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
@@ -11,7 +13,7 @@ public class ServletSpringMvc extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { AppWebConfiguration.class };
+		return new Class[] { AppWebConfiguration.class, JPAConfiguration.class };
 	}
 
 	@Override
